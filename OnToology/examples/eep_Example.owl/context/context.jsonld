@@ -1,0 +1,53 @@
+{
+  "@context" : {
+    "belongsTo" : {
+      "@id" : "https://w3id.org/affectedBy#belongsTo",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "onQuality" : {
+      "@id" : "https://w3id.org/eep#onQuality",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "Procedure" : {
+      "@id" : "https://w3id.org/eep#Procedure"
+    },
+    "Execution" : {
+      "@id" : "https://w3id.org/eep#Execution"
+    },
+    "FeatureOfInterest" : {
+      "@id" : "https://w3id.org/affectedBy#FeatureOfInterest"
+    },
+    "Quality" : {
+      "@id" : "https://w3id.org/affectedBy#Quality"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "Executor" : {
+      "@id" : "https://w3id.org/eep#Executor"
+    },
+    "usedProcedure" : {
+      "@id" : "https://w3id.org/eep#usedProcedure",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "madeBy" : {
+      "@id" : "https://w3id.org/eep#madeBy",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    }
+  }
+}
