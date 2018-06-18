@@ -1,0 +1,46 @@
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eep> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl> <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>\nJes\u00FAs Berm\u00FAdez <mailto:jesus.bermudez@ehu.eus>" .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl> <http://purl.org/dc/terms/description> "The AffectedBy ODP example."@en .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl> <http://purl.org/dc/terms/title> "AffectedBy ODP Example"@en .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#monitoringProcedure
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#monitoringProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#monitoringProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eep#Procedure> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#monitoringProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "A monitoring procedure"@en .
+# 
+# http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#observation_13
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#observation_13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#observation_13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eep#Execution> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#observation_13> <https://w3id.org/eep#madeBy> <http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#sensor_tib36> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#observation_13> <https://w3id.org/eep#onQuality> <http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarmTemperature> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#observation_13> <https://w3id.org/eep#usedProcedure> <http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#monitoringProcedure> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#observation_13> <http://www.w3.org/2000/01/rdf-schema#comment> "An observation tegistered by the sensor"@en .
+# 
+# http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarm
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/affectedBy#FeatureOfInterest> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarm> <http://www.w3.org/2000/01/rdf-schema#comment> "The poultry farm where I want to achieve the energy efficiency"@en .
+# 
+# http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarmTemperature
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarmTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarmTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/affectedBy#Quality> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarmTemperature> <https://w3id.org/affectedBy#belongsTo> <http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarm> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#poultryFarmTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "The temperature within the poultry farm"@en .
+# 
+# http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#sensor_tib36
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#sensor_tib36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#sensor_tib36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eep#Executor> .
+<http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl#sensor_tib36> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor that measures the temperature of the farm"@en .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
