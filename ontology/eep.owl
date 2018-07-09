@@ -18,15 +18,6 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">(CQ1). What are the features of interest of a given sensor/actuator?    
-(CQ2). What are the features of interest of a given observation/actuation?    
-(CQ3). What are the properties sensored/actuated by a given sensor/actuator?    
-(CQ4). What are the properties observed/actuated by a given observation/actuation?    
-(CQ5). What are the observations/actuations of a given sensor/actuator?    
-(CQ6). What are the observations/actuations provided by a given procedure?</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent"/>
         <IRI>https://w3id.org/AffectedBy/</IRI>
     </Annotation>
@@ -42,6 +33,10 @@
         <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Iker Esnaola-Gonzalez &lt;mailto:iker.esnaola@tekniker.es&gt;
 Jesús Bermúdez &lt;mailto:jesus.bermudez@ehu.eus&gt;</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/created"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2018-05-20</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom"/>
@@ -86,6 +81,16 @@ The remaining object properties: eep:implements, that links executors to  proced
         <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">eep</Literal>
     </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">(CQ1). What are the observations/actuations performed by a given procedure?    
+(CQ2). What are the observations/actuations performed by a given sensor/actuator?    
+(CQ3). What are the procedures implemented by a given sensor/actuator?    
+(CQ4). What are the features of interest on a given observation/actuation?    
+(CQ5). What are the properties/qualities sensed/actuated by a given observations/actuations?    
+(CQ6). What are the features of interest of a given sensor/actuator?    
+(CQ7). What are the properties/qualities sensed/actuated by a given executor?</Literal>
+    </Annotation>
     <Declaration>
         <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
     </Declaration>
@@ -115,6 +120,9 @@ The remaining object properties: eep:implements, that links executors to  proced
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/created"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="https://w3id.org/affectedBy#belongsTo"/>
