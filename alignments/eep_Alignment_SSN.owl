@@ -28,7 +28,7 @@ Jesús Bermúdez &lt;mailto:jesus.bermudez@ehu.eus&gt;</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://creativecommons.org/licenses/by/3.0/</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://purl.org/NET/rdflicense/cc-by4.0</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>

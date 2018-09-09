@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1536501045199" name="http://193.144.237.227:8890/DAV/home/dba/ODP/EEP_Example.owl" uri="eep_Example.owl"/>
+    </group>
+</catalog>
