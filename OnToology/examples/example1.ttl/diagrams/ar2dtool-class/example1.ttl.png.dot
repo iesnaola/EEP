@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"base:obs14" -> "base:monitoringProc" [ label = "eep:usedProcedure" ];
+	"base:obs14" -> "base:farmHumidity" [ label = "eep:onQuality" ];
+	"base:obs14" -> "base:sensor36" [ label = "eep:madeBy" ];
+	"base:farm" -> "base:farmTemperature" [ label = "affectedBy:hasQuality" ];
+	"base:farm" -> "base:farmHumidity" [ label = "affectedBy:hasQuality" ];
+	"https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "ns:license" ];
+	"https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl" -> "https://w3id.org/eep" [ label = "owl:imports" ];
+	"base:obs13" -> "base:monitoringProc" [ label = "eep:usedProcedure" ];
+	"base:obs13" -> "base:farmTemperature" [ label = "eep:onQuality" ];
+	"base:obs13" -> "base:sensor36" [ label = "eep:madeBy" ];
+
+}

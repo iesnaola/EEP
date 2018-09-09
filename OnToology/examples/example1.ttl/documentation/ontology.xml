@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#"
+     xml:base="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl"
+     xmlns:eep="https://w3id.org/eep#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:affectedBy="https://w3id.org/affectedBy#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:ns1="http://creativecommons.org/ns#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl">
+        <owl:imports rdf:resource="https://w3id.org/eep"/>
+        <ns1:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <terms:created xml:lang="en">2018-05-20</terms:created>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iker Esnaola-Gonzalez &lt;mailto:iker.esnaola@tekniker.es&gt;
+Jesús Bermúdez &lt;mailto:jesus.bermudez@ehu.eus&gt;</terms:creator>
+        <terms:description xml:lang="en">The EEP ODP example.</terms:description>
+        <terms:title xml:lang="en">EEP ODP Example</terms:title>
+        <owl:versionInfo xml:lang="en">1.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/affectedBy#hasQuality -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/affectedBy#hasQuality"/>
+    
+
+
+    <!-- https://w3id.org/eep#madeBy -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/eep#madeBy"/>
+    
+
+
+    <!-- https://w3id.org/eep#onQuality -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/eep#onQuality"/>
+    
+
+
+    <!-- https://w3id.org/eep#usedProcedure -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/eep#usedProcedure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/affectedBy#FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="https://w3id.org/affectedBy#FeatureOfInterest"/>
+    
+
+
+    <!-- https://w3id.org/affectedBy#Quality -->
+
+
+    <owl:Class rdf:about="https://w3id.org/affectedBy#Quality"/>
+    
+
+
+    <!-- https://w3id.org/eep#Execution -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eep#Execution"/>
+    
+
+
+    <!-- https://w3id.org/eep#Executor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eep#Executor"/>
+    
+
+
+    <!-- https://w3id.org/eep#Procedure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eep#Procedure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farm -->
+
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farm">
+        <rdf:type rdf:resource="https://w3id.org/affectedBy#FeatureOfInterest"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A farm</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">farm</rdfs:label>
+        <affectedBy:hasQuality rdf:resource="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity"/>
+        <affectedBy:hasQuality rdf:resource="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity">
+        <rdf:type rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity inside the farm</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">farmHumidity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature">
+        <rdf:type rdf:resource="https://w3id.org/affectedBy#Quality"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature inside the farm</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">farmTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc -->
+
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc">
+        <rdf:type rdf:resource="https://w3id.org/eep#Procedure"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monitoring Procedure</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monitoringProc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13 -->
+
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13">
+        <rdf:type rdf:resource="https://w3id.org/eep#Execution"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Observation 13</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obs13</rdfs:label>
+        <eep:madeBy rdf:resource="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36"/>
+        <eep:onQuality rdf:resource="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature"/>
+        <eep:usedProcedure rdf:resource="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14 -->
+
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14">
+        <rdf:type rdf:resource="https://w3id.org/eep#Execution"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Observation 14</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obs14</rdfs:label>
+        <eep:madeBy rdf:resource="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36"/>
+        <eep:onQuality rdf:resource="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity"/>
+        <eep:usedProcedure rdf:resource="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36 -->
+
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36">
+        <rdf:type rdf:resource="https://w3id.org/eep#Executor"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor 36</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sensor36</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,124 @@
+@prefix : <https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl> .
+
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl> rdf:type owl:Ontology ;
+                                                                               owl:imports <https://w3id.org/eep> ;
+                                                                               <http://creativecommons.org/ns#license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                                                               <http://purl.org/dc/terms/created> "2018-05-20"@en ;
+                                                                               <http://purl.org/dc/terms/creator> """Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>
+Jesús Bermúdez <mailto:jesus.bermudez@ehu.eus>"""^^xsd:string ;
+                                                                               <http://purl.org/dc/terms/description> "The EEP ODP example."@en ;
+                                                                               <http://purl.org/dc/terms/title> "EEP ODP Example"@en ;
+                                                                               owl:versionInfo "1.1"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/affectedBy#hasQuality
+<https://w3id.org/affectedBy#hasQuality> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eep#madeBy
+<https://w3id.org/eep#madeBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eep#onQuality
+<https://w3id.org/eep#onQuality> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eep#usedProcedure
+<https://w3id.org/eep#usedProcedure> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/affectedBy#FeatureOfInterest
+<https://w3id.org/affectedBy#FeatureOfInterest> rdf:type owl:Class .
+
+
+###  https://w3id.org/affectedBy#Quality
+<https://w3id.org/affectedBy#Quality> rdf:type owl:Class .
+
+
+###  https://w3id.org/eep#Execution
+<https://w3id.org/eep#Execution> rdf:type owl:Class .
+
+
+###  https://w3id.org/eep#Executor
+<https://w3id.org/eep#Executor> rdf:type owl:Class .
+
+
+###  https://w3id.org/eep#Procedure
+<https://w3id.org/eep#Procedure> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farm
+:farm rdf:type owl:NamedIndividual ,
+               <https://w3id.org/affectedBy#FeatureOfInterest> ;
+      rdfs:comment "A farm"^^xsd:string ;
+      rdfs:label "farm"^^xsd:string ;
+      <https://w3id.org/affectedBy#hasQuality> :farmHumidity ,
+                                               :farmTemperature .
+
+
+###  https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity
+:farmHumidity rdf:type owl:NamedIndividual ,
+                       <https://w3id.org/affectedBy#Quality> ;
+              rdfs:comment "Humidity inside the farm"^^xsd:string ;
+              rdfs:label "farmHumidity"^^xsd:string .
+
+
+###  https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature
+:farmTemperature rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/affectedBy#Quality> ;
+                 rdfs:comment "Temperature inside the farm"^^xsd:string ;
+                 rdfs:label "farmTemperature"^^xsd:string .
+
+
+###  https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc
+:monitoringProc rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/eep#Procedure> ;
+                rdfs:comment "Monitoring Procedure"^^xsd:string ;
+                rdfs:label "monitoringProc"^^xsd:string .
+
+
+###  https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13
+:obs13 rdf:type owl:NamedIndividual ,
+                <https://w3id.org/eep#Execution> ;
+       rdfs:comment "Observation 13"^^xsd:string ;
+       rdfs:label "obs13"^^xsd:string ;
+       <https://w3id.org/eep#madeBy> :sensor36 ;
+       <https://w3id.org/eep#onQuality> :farmTemperature ;
+       <https://w3id.org/eep#usedProcedure> :monitoringProc .
+
+
+###  https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14
+:obs14 rdf:type owl:NamedIndividual ,
+                <https://w3id.org/eep#Execution> ;
+       rdfs:comment "Observation 14"^^xsd:string ;
+       rdfs:label "obs14"^^xsd:string ;
+       <https://w3id.org/eep#madeBy> :sensor36 ;
+       <https://w3id.org/eep#onQuality> :farmHumidity ;
+       <https://w3id.org/eep#usedProcedure> :monitoringProc .
+
+
+###  https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36
+:sensor36 rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/eep#Executor> ;
+          rdfs:comment "Sensor 36"^^xsd:string ;
+          rdfs:label "sensor36"^^xsd:string .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
