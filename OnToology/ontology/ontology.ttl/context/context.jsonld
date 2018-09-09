@@ -1,0 +1,108 @@
+{
+  "@context" : {
+    "belongsTo" : {
+      "@id" : "https://w3id.org/affectedBy#belongsTo",
+      "@type" : "@id"
+    },
+    "implements" : {
+      "@id" : "https://w3id.org/eep#implements",
+      "@type" : "@id"
+    },
+    "term_status" : {
+      "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "onQuality" : {
+      "@id" : "https://w3id.org/eep#onQuality",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "Procedure" : {
+      "@id" : "https://w3id.org/eep#Procedure"
+    },
+    "Execution" : {
+      "@id" : "https://w3id.org/eep#Execution"
+    },
+    "FeatureOfInterest" : {
+      "@id" : "https://w3id.org/affectedBy#FeatureOfInterest"
+    },
+    "reengineeredFrom" : {
+      "@id" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Quality" : {
+      "@id" : "https://w3id.org/affectedBy#Quality"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "Executor" : {
+      "@id" : "https://w3id.org/eep#Executor"
+    },
+    "relatedCPs" : {
+      "@id" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "forQuality" : {
+      "@id" : "https://w3id.org/eep#forQuality",
+      "@type" : "@id"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "usedProcedure" : {
+      "@id" : "https://w3id.org/eep#usedProcedure",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "Vocabulary" : {
+      "@id" : "http://purl.org/vocommons/voaf#Vocabulary"
+    },
+    "hasFeatureOfInterest" : {
+      "@id" : "https://w3id.org/eep#hasFeatureOfInterest",
+      "@type" : "@id"
+    },
+    "forFeatureOfInterest" : {
+      "@id" : "https://w3id.org/eep#forFeatureOfInterest",
+      "@type" : "@id"
+    },
+    "coversRequirements" : {
+      "@id" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements"
+    },
+    "hasConsequences" : {
+      "@id" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences"
+    },
+    "hasIntent" : {
+      "@id" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "hasComponent" : {
+      "@id" : "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent"
+    },
+    "madeBy" : {
+      "@id" : "https://w3id.org/eep#madeBy",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

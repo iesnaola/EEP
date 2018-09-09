@@ -1,0 +1,113 @@
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eep> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl> <http://creativecommons.org/ns#license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl> <http://purl.org/dc/terms/created> "2018-05-20"@en .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl> <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>\nJes\u00FAs Berm\u00FAdez <mailto:jesus.bermudez@ehu.eus>" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl> <http://purl.org/dc/terms/description> "The EEP ODP example."@en .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl> <http://purl.org/dc/terms/title> "EEP ODP Example"@en .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl> <http://www.w3.org/2002/07/owl#versionInfo> "1.1"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/affectedBy#hasQuality
+<https://w3id.org/affectedBy#hasQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eep#madeBy
+<https://w3id.org/eep#madeBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eep#onQuality
+<https://w3id.org/eep#onQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eep#usedProcedure
+<https://w3id.org/eep#usedProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/affectedBy#FeatureOfInterest
+<https://w3id.org/affectedBy#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/affectedBy#Quality
+<https://w3id.org/affectedBy#Quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eep#Execution
+<https://w3id.org/eep#Execution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eep#Executor
+<https://w3id.org/eep#Executor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eep#Procedure
+<https://w3id.org/eep#Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farm
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/affectedBy#FeatureOfInterest> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farm> <http://www.w3.org/2000/01/rdf-schema#comment> "A farm" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farm> <http://www.w3.org/2000/01/rdf-schema#label> "farm" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farm> <https://w3id.org/affectedBy#hasQuality> <https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farm> <https://w3id.org/affectedBy#hasQuality> <https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature> .
+# 
+# https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/affectedBy#Quality> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity> <http://www.w3.org/2000/01/rdf-schema#comment> "Humidity inside the farm" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity> <http://www.w3.org/2000/01/rdf-schema#label> "farmHumidity" .
+# 
+# https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/affectedBy#Quality> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Temperature inside the farm" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "farmTemperature" .
+# 
+# https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eep#Procedure> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc> <http://www.w3.org/2000/01/rdf-schema#comment> "Monitoring Procedure" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc> <http://www.w3.org/2000/01/rdf-schema#label> "monitoringProc" .
+# 
+# https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eep#Execution> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13> <http://www.w3.org/2000/01/rdf-schema#comment> "Observation 13" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13> <http://www.w3.org/2000/01/rdf-schema#label> "obs13" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13> <https://w3id.org/eep#madeBy> <https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13> <https://w3id.org/eep#onQuality> <https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmTemperature> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs13> <https://w3id.org/eep#usedProcedure> <https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc> .
+# 
+# https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eep#Execution> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14> <http://www.w3.org/2000/01/rdf-schema#comment> "Observation 14" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14> <http://www.w3.org/2000/01/rdf-schema#label> "obs14" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14> <https://w3id.org/eep#madeBy> <https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14> <https://w3id.org/eep#onQuality> <https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#farmHumidity> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#obs14> <https://w3id.org/eep#usedProcedure> <https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#monitoringProc> .
+# 
+# https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eep#Executor> .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensor 36" .
+<https://raw.githubusercontent.com/iesnaola/EEP/master/examples/example1.ttl#sensor36> <http://www.w3.org/2000/01/rdf-schema#label> "sensor36" .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
