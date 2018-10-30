@@ -8,7 +8,7 @@
 
 <https://w3id.org/eep> rdf:type owl:Ontology ;
                         owl:imports <https://w3id.org/affectedBy> ;
-                        owl:versionInfo 1.0 ;
+                        owl:versionInfo 1.1 ;
                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent> <https://w3id.org/AffectedBy/> ;
                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent> "To represent executions made by executors that implement procedures. Executions are events like observations or actuations. Executors are systems like sensors or actuators that produce executions. Executors implement procedures to carry out their goals. Executions and executors are taken over features of interest and their intrinsic properties/qualities."@en ;
                         <http://purl.org/dc/terms/creator> """Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>
@@ -26,6 +26,7 @@ DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl""" ;
 
 Note that only triples about the four functional object properties: eep:madeBy, eep:usedProcedure, eep:onQuality, and aff:belongsTo, needs to be asserted, the remaining triples are inferred by the property axioms."""@en ;
                         <http://creativecommons.org/ns#license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                        <http://purl.org/dc/terms/modified> "2018-09-01" ;
                         <http://purl.org/dc/terms/description> """The Execution-Executor-Procedure (EEP) ODP imports the AffectedBy ODP (https://w3id.org/affectedBy), that involves classes for Features of Interest and their intrinsic Properties/Qualities. 
 
 The EEP ODP is an adaptation of the Procedure Execution Ontology (PEP) (https://w3id.org/pep/pep-1.1) from the SEAS ontology which, in turn, is a generalization of the Observation-Sensor-Procedure and Actuation-Actuator-Procedure patterns used in the SOSA (http://www.w3.org/ns/sosa/) and SSN (http://www.w3.org/ns/ssn/) ontologies.
@@ -44,7 +45,6 @@ The remaining object properties: eep:implements, that links executors to  proced
 (CQ5). What are the properties/qualities sensed/actuated by a given observations/actuations?    
 (CQ6). What are the features of interest of a given sensor/actuator?    
 (CQ7). What are the properties/qualities sensed/actuated by a given executor?"""@en .
-
 
 #################################################################
 #    Object Properties
@@ -159,6 +159,18 @@ The remaining object properties: eep:implements, that links executors to  proced
 
 ###  https://w3id.org/eep#Execution
 :Execution rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :madeBy ;
+                             owl:someValuesFrom :Executor
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :onQuality ;
+                             owl:someValuesFrom <https://w3id.org/affectedBy#Quality>
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :usedProcedure ;
+                             owl:someValuesFrom :Procedure
+                           ] ;
            rdfs:comment "An event made by an agent executing a task implemented by a procedure."^^xsd:string ;
            rdfs:isDefinedBy <https://w3id.org/eep/> ;
            rdfs:label "Execution"@en ;
