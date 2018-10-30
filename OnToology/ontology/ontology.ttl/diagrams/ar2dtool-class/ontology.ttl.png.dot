@@ -1,0 +1,39 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Procedure" "base:Executor" "base:Execution" "https://w3id.org/affectedBy#Quality" "https://w3id.org/affectedBy#FeatureOfInterest" ; /*classes style*/
+	"base:forFeatureOfInterest" -> "-1f9d3876:166c5c5403a:-7ffc" [ label = "owl:propertyChainAxiom" ];
+	"base:implements" -> "-1f9d3876:166c5c5403a:-7ff6" [ label = "owl:propertyChainAxiom" ];
+	"base:forQuality" -> "-1f9d3876:166c5c5403a:-7ffa" [ label = "owl:propertyChainAxiom" ];
+	"https://w3id.org/eep" -> "https://w3id.org/AffectedBy/" [ label = ":hasComponent" ];
+	"https://w3id.org/eep" -> "https://w3id.org/eep/" [ label = ":preferredNamespaceUri" ];
+	"https://w3id.org/eep" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
+	"https://w3id.org/eep" -> "https://w3id.org/affectedBy" [ label = "owl:imports" ];
+	"https://w3id.org/eep" -> "https://w3id.org/pep/pep-1.1" [ label = ":relatedCPs" ];
+	"base:hasFeatureOfInterest" -> "-1f9d3876:166c5c5403a:-7ff8" [ label = "owl:propertyChainAxiom" ];
+	"NULL" -> "https://w3id.org/affectedBy#Quality" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "-1f9d3876:166c5c5403a:-7ff5" [ label = "rdf:rest" ];
+	"NULL" -> "base:madeBy" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Procedure" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:usedProcedure" [ label = "rdf:first" ];
+	"NULL" -> "-1f9d3876:166c5c5403a:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "5700e1a5c1cb4b1dad0083e81e2ba765" [ label = "rdf:first" ];
+	"NULL" -> "-1f9d3876:166c5c5403a:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "https://w3id.org/affectedBy#belongsTo" [ label = "rdf:first" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "base:Executor" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:usedProcedure" [ label = "owl:onProperty" ];
+	"NULL" -> "base:onQuality" [ label = "owl:onProperty" ];
+	"NULL" -> "base:forQuality" [ label = "rdf:first" ];
+	"NULL" -> "-1f9d3876:166c5c5403a:-7ff9" [ label = "rdf:rest" ];
+	"NULL" -> "46b47502b2ef7553a19d4cbf1d683f1f" [ label = "rdf:first" ];
+	"NULL" -> "base:onQuality" [ label = "rdf:first" ];
+	"base:Executor" -> "https://w3id.org/affectedBy#FeatureOfInterest" [ label = "base:forFeatureOfInterest" ];
+	"base:Executor" -> "base:Procedure" [ label = "base:implements" ];
+	"base:Execution" -> "https://w3id.org/affectedBy#Quality" [ label = "base:onQuality" ];
+	"base:Execution" -> "base:Executor" [ label = "base:madeBy" ];
+	"base:Executor" -> "https://w3id.org/affectedBy#Quality" [ label = "base:forQuality" ];
+	"base:Execution" -> "base:Procedure" [ label = "base:usedProcedure" ];
+	"base:Execution" -> "https://w3id.org/affectedBy#FeatureOfInterest" [ label = "base:hasFeatureOfInterest" ];
+
+}
