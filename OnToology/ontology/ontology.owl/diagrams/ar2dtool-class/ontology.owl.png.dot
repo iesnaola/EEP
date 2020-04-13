@@ -1,0 +1,39 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Procedure" "base:Executor" "base:Execution" "https://w3id.org/affectedBy#Quality" "https://w3id.org/affectedBy#FeatureOfInterest" ; /*classes style*/
+	"base:forFeatureOfInterest" -> "4723f17:171737423bf:-7ffc" [ label = "owl:propertyChainAxiom" ];
+	"base:implements" -> "4723f17:171737423bf:-7ff5" [ label = "owl:propertyChainAxiom" ];
+	"base:forQuality" -> "4723f17:171737423bf:-7ffa" [ label = "owl:propertyChainAxiom" ];
+	"https://w3id.org/eep" -> "https://w3id.org/AffectedBy/" [ label = "cpannotationschema:hasComponent" ];
+	"https://w3id.org/eep" -> "https://w3id.org/eep/" [ label = "vann:preferredNamespaceUri" ];
+	"https://w3id.org/eep" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "ns1:license" ];
+	"https://w3id.org/eep" -> "https://w3id.org/affectedBy" [ label = "owl:imports" ];
+	"https://w3id.org/eep" -> "https://w3id.org/pep/pep-1.1" [ label = "cpannotationschema:relatedCPs" ];
+	"base:hasFeatureOfInterest" -> "4723f17:171737423bf:-7ff7" [ label = "owl:propertyChainAxiom" ];
+	"NULL" -> "4723f17:171737423bf:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "https://w3id.org/affectedBy#Quality" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:madeBy" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Procedure" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:usedProcedure" [ label = "rdf:first" ];
+	"NULL" -> "4723f17:171737423bf:-7ff4" [ label = "rdf:first" ];
+	"NULL" -> "4723f17:171737423bf:-7ff3" [ label = "rdf:rest" ];
+	"NULL" -> "https://w3id.org/affectedBy#belongsTo" [ label = "rdf:first" ];
+	"NULL" -> "base:usedProcedure" [ label = "owl:onProperty" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "4723f17:171737423bf:-7ff9" [ label = "rdf:first" ];
+	"NULL" -> "base:onQuality" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Executor" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "4723f17:171737423bf:-7ff6" [ label = "rdf:rest" ];
+	"NULL" -> "base:forQuality" [ label = "rdf:first" ];
+	"NULL" -> "base:onQuality" [ label = "rdf:first" ];
+	"NULL" -> "4723f17:171737423bf:-7ff8" [ label = "rdf:rest" ];
+	"base:Executor" -> "https://w3id.org/affectedBy#FeatureOfInterest" [ label = "base:forFeatureOfInterest" ];
+	"base:Executor" -> "base:Procedure" [ label = "base:implements" ];
+	"base:Execution" -> "https://w3id.org/affectedBy#Quality" [ label = "base:onQuality" ];
+	"base:Execution" -> "base:Executor" [ label = "base:madeBy" ];
+	"base:Executor" -> "https://w3id.org/affectedBy#Quality" [ label = "base:forQuality" ];
+	"base:Execution" -> "base:Procedure" [ label = "base:usedProcedure" ];
+	"base:Execution" -> "https://w3id.org/affectedBy#FeatureOfInterest" [ label = "base:hasFeatureOfInterest" ];
+
+}
