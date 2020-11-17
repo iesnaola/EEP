@@ -8,10 +8,25 @@
 
 <https://w3id.org/eep> rdf:type owl:Ontology ;
                         owl:imports <https://w3id.org/affectedBy> ;
-                        <http://creativecommons.org/ns#license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                        <http://purl.org/dc/terms/created> "2018-05-20"^^xsd:string ;
+                        owl:versionInfo 1.1 ;
+                        <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent> <https://w3id.org/AffectedBy/> ;
+                        <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent> "To represent executions made by executors that implement procedures. Executions are events like observations or actuations. Executors are systems like sensors or actuators that produce executions. Executors implement procedures to carry out their goals. Executions and executors are taken over features of interest and their intrinsic properties/qualities."@en ;
                         <http://purl.org/dc/terms/creator> """Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>
-Jesús Bermúdez <mailto:jesus.bermudez@ehu.eus>"""^^xsd:string ;
+Jesús Bermúdez <mailto:jesus.bermudez@ehu.eus>""" ;
+                        <http://purl.org/dc/terms/created> "2018-05-20" ;
+                        <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom> """PEP: https://w3id.org/pep/pep-1.1
+
+SOSA: http://www.w3.org/ns/sosa/
+
+SSN: http://www.w3.org/ns/ssn/
+
+DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl""" ;
+                        <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs> <https://w3id.org/pep/pep-1.1> ;
+                        <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences> """Axioms included in the EEP ODP provide inferences that allow to answer the competency questions properly. Therefore, solving some weaknesses of the sosa/ssn ontologies.
+
+Note that only triples about the four functional object properties: eep:madeBy, eep:usedProcedure, eep:onQuality, and aff:belongsTo, needs to be asserted, the remaining triples are inferred by the property axioms."""@en ;
+                        <http://creativecommons.org/ns#license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                        <http://purl.org/dc/terms/modified> "2018-09-01" ;
                         <http://purl.org/dc/terms/description> """The Execution-Executor-Procedure (EEP) ODP imports the AffectedBy ODP (https://w3id.org/affectedBy), that involves classes for Features of Interest and their intrinsic Properties/Qualities. 
 
 The EEP ODP is an adaptation of the Procedure Execution Ontology (PEP) (https://w3id.org/pep/pep-1.1) from the SEAS ontology which, in turn, is a generalization of the Observation-Sensor-Procedure and Actuation-Actuator-Procedure patterns used in the SOSA (http://www.w3.org/ns/sosa/) and SSN (http://www.w3.org/ns/ssn/) ontologies.
@@ -20,31 +35,16 @@ From the AffectedBy ODP, the EEP ODP imports the notion that a property/quality 
 Apart from the two classes imported from the AffectedBy ODP (aff:FeatureOfIntetest and aff:Quality), the EEP ODP consists of three more classes: Execution, Executor, and Procedure. The class Execution and their three functional object properties: eep:madeBy, eep:usedProcedure, and eep:onQuality, forms the backbone of the ODP. The property eep:madeBy links an execution to its executor, the property eep:usedProcedure links an execution to its procedure, and the property eep:onQuality links an execution to the quality/property concerned by the execution. Therefore, an execution jointly with their three object values of the three aforementioned properties can be considered as a n-ary relationship. Note that every quality belongs to unique feature of interest. Therefore, a feature of interest is involved in the n-ary relationship.
 
 The remaining object properties: eep:implements, that links executors to  procedures, eep:hasFeatureOfInteres, that links executions to features of interest, eep:forQuality, that links executors to qualities, and eep:forFeatureOfInterest, that links executors to features of interest, are defined in terms of the functional object properties using property chain axioms."""@en ;
-                        <http://purl.org/dc/terms/modified> "2018-09-01"^^xsd:string ;
-                        <http://purl.org/dc/terms/title> "Execution-Executor-Procedure ODP"^^xsd:string ;
-                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "eep"^^xsd:string ;
                         <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/eep/> ;
+                        <http://purl.org/dc/terms/title> "Execution-Executor-Procedure ODP" ;
+                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "eep" ;
                         <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements> """(CQ1). What are the observations/actuations performed by a given procedure?    
 (CQ2). What are the observations/actuations performed by a given sensor/actuator?    
 (CQ3). What are the procedures implemented by a given sensor/actuator?    
 (CQ4). What are the features of interest on a given observation/actuation?    
 (CQ5). What are the properties/qualities sensed/actuated by a given observations/actuations?    
 (CQ6). What are the features of interest of a given sensor/actuator?    
-(CQ7). What are the properties/qualities sensed/actuated by a given executor?"""@en ;
-                        <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent> <https://w3id.org/AffectedBy/> ;
-                        <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences> """Axioms included in the EEP ODP provide inferences that allow to answer the competency questions properly. Therefore, solving some weaknesses of the sosa/ssn ontologies.
-
-Note that only triples about the four functional object properties: eep:madeBy, eep:usedProcedure, eep:onQuality, and aff:belongsTo, needs to be asserted, the remaining triples are inferred by the property axioms."""@en ;
-                        <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent> "To represent executions made by executors that implement procedures. Executions are events like observations or actuations. Executors are systems like sensors or actuators that produce executions. Executors implement procedures to carry out their goals. Executions and executors are taken over features of interest and their intrinsic properties/qualities."@en ;
-                        <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom> """PEP: https://w3id.org/pep/pep-1.1
-
-SOSA: http://www.w3.org/ns/sosa/
-
-SSN: http://www.w3.org/ns/ssn/
-
-DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"""^^xsd:string ;
-                        <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs> <https://w3id.org/pep/pep-1.1> ;
-                        owl:versionInfo 1.1 .
+(CQ7). What are the properties/qualities sensed/actuated by a given executor?"""@en .
 
 #################################################################
 #    Object Properties
@@ -64,7 +64,7 @@ DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"""^^xsd:string ;
                       rdfs:comment "Relation that links an executor to the features of interest of the executions it made."^^xsd:string ;
                       rdfs:isDefinedBy <https://w3id.org/eep/> ;
                       rdfs:label "forFeatureOfInterest"@en ;
-                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 
 ###  https://w3id.org/eep#forQuality
@@ -78,7 +78,7 @@ DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"""^^xsd:string ;
             rdfs:comment "Relation that links an executor to the qualities acted upon by the executions it made."^^xsd:string ;
             rdfs:isDefinedBy <https://w3id.org/eep/> ;
             rdfs:label "forQuality"@en ;
-            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 
 ###  https://w3id.org/eep#hasFeatureOfInterest
@@ -91,7 +91,7 @@ DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"""^^xsd:string ;
                       rdfs:comment "Relation that links an execution to the feature of interest it is acting upon."^^xsd:string ;
                       rdfs:isDefinedBy <https://w3id.org/eep/> ;
                       rdfs:label "hasFeatureOfInterest"@en ;
-                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 
 ###  https://w3id.org/eep#implements
@@ -116,7 +116,7 @@ DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"""^^xsd:string ;
         rdfs:comment "Relation that links an execution to the executor that made the execution."^^xsd:string ;
         rdfs:isDefinedBy <https://w3id.org/eep/> ;
         rdfs:label "madeBy"@en ;
-        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 
 ###  https://w3id.org/eep#onQuality
@@ -127,7 +127,7 @@ DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"""^^xsd:string ;
            rdfs:comment "Relation that links an execution to the quality it is acting upon."^^xsd:string ;
            rdfs:isDefinedBy <https://w3id.org/eep/> ;
            rdfs:label "onQuality"@en ;
-           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 
 ###  https://w3id.org/eep#usedProcedure
@@ -138,7 +138,7 @@ DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"""^^xsd:string ;
                rdfs:comment "A relation that links an execution to the procedure used in making the execution through an executor agent."^^xsd:string ;
                rdfs:isDefinedBy <https://w3id.org/eep/> ;
                rdfs:label "usedProcedure"@en ;
-               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 
 #################################################################
@@ -182,7 +182,7 @@ DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"""^^xsd:string ;
           rdfs:comment "An agent that produces an event (Execution) by implementing a procedure."^^xsd:string ;
           rdfs:isDefinedBy <https://w3id.org/eep/> ;
           rdfs:label "Executor"@en ;
-          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 
 ###  https://w3id.org/eep#Procedure
@@ -190,7 +190,7 @@ DUL: http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"""^^xsd:string ;
            rdfs:comment "A workflow, protocol, plan, algorithm, or computational method specifying how to produce an event."^^xsd:string ;
            rdfs:isDefinedBy <https://w3id.org/eep/> ;
            rdfs:label "Procedure"@en ;
-           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 
 #################################################################
